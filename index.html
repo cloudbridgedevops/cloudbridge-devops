@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloudBridge DevOps Consulting | #1 Global DevOps Career Transformation</title>
+<meta name="description" content="Production-level AWS & DevOps training. 90-day intensive program with 1-on-1 mentoring. Transform your career for US, Australia, Singapore & Canada markets.">
+<meta name="keywords" content="DevOps Training, AWS Training, Kubernetes, Terraform, CI/CD, DevSecOps, Cloud Computing, Online Training">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--primary:#1746a2;--primary-dark:#0f3180;--primary-light:#e8effc;--primary-50:#f0f5ff;
+--accent:#f26522;--accent-dark:#d9550e;--accent-light:#fff3eb;
+--green:#0ea14f;--green-light:#ecfdf5;
+--red:#dc2626;--red-light:#fef2f2;
+--purple:#7c3aed;--purple-light:#f3e8ff;
+--teal:#0d9488;--teal-light:#f0fdfa;
+--yellow:#eab308;--yellow-light:#fefce8;
+--navy:#0f172a;--navy-800:#1e293b;--navy-700:#334155;
+--white:#ffffff;--gray-50:#f8fafc;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--gray-300:#cbd5e1;--gray-400:#94a3b8;--gray-500:#64748b;--gray-600:#475569;--gray-700:#334155;--gray-800:#1e293b;--gray-900:#0f172a;
+--shadow-xs:0 1px 2px rgba(0,0,0,0.05);--shadow-sm:0 1px 3px rgba(0,0,0,0.08),0 1px 2px rgba(0,0,0,0.04);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.08),0 2px 4px -2px rgba(0,0,0,0.05);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.08),0 4px 6px -4px rgba(0,0,0,0.04);--shadow-xl:0 20px 25px -5px rgba(0,0,0,0.08),0 8px 10px -6px rgba(0,0,0,0.04);--shadow-2xl:0 25px 50px -12px rgba(0,0,0,0.15);
+--radius:8px;--radius-lg:12px;--radius-xl:16px;--radius-2xl:20px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--gray-900);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+
+/* ============ TOP BAR ============ */
+.topbar{background:var(--navy);color:white;font-size:13px;position:relative;z-index:1002}
+.topbar-inner{max-width:1320px;margin:0 auto;padding:7px 2rem;display:flex;justify-content:space-between;align-items:center}
+.topbar-left{display:flex;align-items:center;gap:24px}
+.topbar-left a{color:white;text-decoration:none;display:flex;align-items:center;gap:6px;font-weight:500;transition:opacity .2s}
+.topbar-left a:hover{opacity:.8}
+.topbar-right{display:flex;align-items:center;gap:12px}
+.topbar-promo{background:linear-gradient(90deg,#f59e0b,#f97316);color:var(--navy);padding:3px 14px;border-radius:100px;font-weight:800;font-size:11px;letter-spacing:.5px;text-transform:uppercase;animation:promoPulse 2s ease infinite}
+.topbar-timer{font-weight:600;color:#fbbf24;font-family:'JetBrains Mono',monospace;font-size:12px}
+.topbar-cta{color:#fbbf24;font-weight:700;text-decoration:none;text-transform:uppercase;font-size:11px;letter-spacing:.5px;transition:color .2s}
+.topbar-cta:hover{color:white}
+@keyframes promoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+
+/* ============ NAVBAR ============ */
+.navbar{background:white;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:1000;transition:box-shadow .3s}
+.navbar.scrolled{box-shadow:var(--shadow-md)}
+.navbar-inner{max-width:1320px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:70px;gap:20px}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.logo-mark{width:42px;height:42px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:15px;color:white;position:relative;overflow:hidden}
+.logo-mark::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.15) 50%,transparent 60%);animation:logoShine 3s ease infinite}
+@keyframes logoShine{0%{transform:translateX(-100%) rotate(45deg)}100%{transform:translateX(100%) rotate(45deg)}}
+.logo-name{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.25rem;color:var(--gray-900);line-height:1.1}
+.logo-name span{color:var(--primary)}
+.logo-sub{font-size:10px;color:var(--gray-400);font-weight:500;letter-spacing:.3px;text-transform:uppercase}
+
+/* Categories btn */
+.cat-btn{display:flex;align-items:center;gap:8px;padding:9px 18px;border:1.5px solid var(--primary);border-radius:var(--radius);color:var(--primary);font-weight:600;font-size:14px;cursor:pointer;background:white;font-family:'Inter',sans-serif;transition:all .2s;position:relative}
+.cat-btn:hover{background:var(--primary-50)}
+.cat-btn svg{transition:transform .3s}
+.cat-btn.open svg{transform:rotate(180deg)}
+
+/* Search */
+.nav-search-wrap{flex:1;max-width:420px;position:relative}
+.nav-search{width:100%;padding:10px 16px 10px 42px;border:1.5px solid var(--gray-200);border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:14px;color:var(--gray-900);background:var(--gray-50);outline:none;transition:all .25s}
+.nav-search:focus{border-color:var(--primary);background:white;box-shadow:0 0 0 3px rgba(23,70,162,.08)}
+.nav-search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--gray-400);pointer-events:none}
+
+/* Nav right */
+.nav-right{display:flex;align-items:center;gap:6px;margin-left:auto;flex-shrink:0}
+.nav-link{text-decoration:none;color:var(--gray-600);font-size:14px;font-weight:500;padding:8px 14px;border-radius:var(--radius);transition:all .2s;white-space:nowrap}
+.nav-link:hover{color:var(--primary);background:var(--primary-50)}
+.nav-divider{width:1px;height:24px;background:var(--gray-200);margin:0 4px}
+.btn-signup{padding:9px 20px;border:1.5px solid var(--gray-300);border-radius:var(--radius);font-weight:600;font-size:13px;color:var(--gray-700);background:white;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.btn-signup:hover{border-color:var(--primary);color:var(--primary)}
+.btn-login{padding:9px 20px;border:1.5px solid var(--primary);border-radius:var(--radius);font-weight:600;font-size:13px;color:var(--primary);background:white;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.btn-login:hover{background:var(--primary);color:white}
+
+/* Mobile menu */
+.mobile-menu-btn{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.mobile-menu-btn span{width:22px;height:2px;background:var(--gray-700);border-radius:2px;transition:all .3s}
+
+/* ============ CATEGORIES DROPDOWN ============ */
+.cat-dropdown{position:absolute;top:calc(100% + 8px);left:0;background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:700px;padding:24px;display:none;z-index:100}
+.cat-dropdown.show{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px}
+.cat-dropdown a{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--radius);text-decoration:none;color:var(--gray-700);font-size:14px;font-weight:500;transition:all .15s}
+.cat-dropdown a:hover{background:var(--primary-50);color:var(--primary)}
+.cat-dropdown .cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* ============ SEARCH OVERLAY ============ */
+.search-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--gray-50);z-index:2000;display:none;overflow-y:auto}
+.search-overlay.show{display:block}
+.search-overlay-header{display:flex;align-items:center;gap:16px;max-width:800px;margin:0 auto;padding:24px 2rem}
+.search-back{width:44px;height:44px;border-radius:50%;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--gray-500);transition:background .2s}
+.search-back:hover{background:var(--gray-200)}
+.search-overlay-input{flex:1;padding:14px 20px;border:2px solid var(--primary);border-radius:var(--radius-lg);font-family:'Inter',sans-serif;font-size:16px;color:var(--gray-900);outline:none}
+.search-overlay-body{max-width:800px;margin:0 auto;padding:0 2rem 3rem;display:grid;grid-template-columns:280px 1fr;gap:3rem}
+.search-col h3{font-size:14px;font-weight:700;color:var(--gray-700);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
+.search-links{display:flex;flex-direction:column;gap:2px}
+.search-links a{font-size:15px;font-weight:500;color:var(--primary);text-decoration:none;padding:8px 0;transition:color .2s}
+.search-links a:hover{color:var(--accent)}
+.popular-courses{display:flex;flex-direction:column;gap:16px}
+.pop-course-card{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px;transition:all .2s}
+.pop-course-card:hover{box-shadow:var(--shadow-md);border-color:var(--gray-300)}
+.pop-course-badge{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.pop-course-card h4{font-size:16px;font-weight:700;color:var(--gray-900);margin-bottom:8px}
+.pop-course-meta{font-size:13px;color:var(--gray-500);display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.pop-course-link{font-size:13px;font-weight:700;color:var(--gray-600);text-decoration:none;display:flex;align-items:center;gap:4px;transition:color .2s}
+.pop-course-link:hover{color:var(--primary)}
+.search-categories{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.search-cat-chip{padding:8px 18px;border:1.5px solid var(--gray-300);border-radius:100px;font-size:13px;font-weight:500;color:var(--gray-700);text-decoration:none;transition:all .2s}
+.search-cat-chip:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-50)}
+
+/* ============ BROWSE BAR ============ */
+.browse-bar{background:white;border-bottom:1px solid var(--gray-100);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.browse-bar::-webkit-scrollbar{display:none}
+.browse-inner{max-width:1320px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:44px;gap:0}
+.browse-label{font-size:13px;font-weight:700;color:var(--gray-900);white-space:nowrap;margin-right:8px;display:flex;align-items:center;gap:4px;cursor:pointer}
+.browse-link{text-decoration:none;color:var(--gray-600);font-size:13px;font-weight:500;padding:10px 16px;white-space:nowrap;border-bottom:2.5px solid transparent;transition:all .2s}
+.browse-link:hover,.browse-link.active{color:var(--primary);border-bottom-color:var(--primary)}
+
+/* ============ BREADCRUMB ============ */
+.breadcrumb{max-width:1320px;margin:0 auto;padding:14px 2rem;font-size:13px;color:var(--gray-400)}
+.breadcrumb a{color:var(--gray-400);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb strong{color:var(--gray-600);font-weight:600}
+
+/* ============ HERO ============ */
+.hero{max-width:1320px;margin:0 auto;padding:10px 2rem 50px;display:grid;grid-template-columns:1fr 1.05fr;gap:4rem;align-items:start}
+.hero-content{padding-top:10px}
+.hero-content h1{font-family:'Poppins',sans-serif;font-size:2.6rem;font-weight:800;line-height:1.12;color:var(--gray-900);letter-spacing:-.5px;margin-bottom:16px}
+.hero-tagline{font-size:17px;font-weight:600;color:var(--primary);margin-bottom:16px;line-height:1.5}
+.hero-desc{font-size:15px;color:var(--gray-600);line-height:1.8;margin-bottom:28px}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;padding:15px 36px;background:var(--accent);color:white;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;border:none;border-radius:var(--radius);cursor:pointer;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(242,101,34,.25)}
+.hero-cta:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(242,101,34,.3)}
+
+/* Hero visual */
+.hero-visual{position:relative}
+.video-card{position:relative;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-2xl);aspect-ratio:16/10;background:linear-gradient(135deg,#1e40af 0%,#7c3aed 50%,#db2777 100%)}
+.video-card-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;text-align:center;color:white}
+.video-card-content .icon{font-size:3.5rem;margin-bottom:10px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2))}
+.video-card-content h3{font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:700}
+.video-card-content p{font-size:13px;opacity:.75;margin-top:4px}
+.play-btn{position:absolute;z-index:3;width:72px;height:72px;background:rgba(255,255,255,.95);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;box-shadow:0 8px 32px rgba(0,0,0,.2);top:50%;left:50%;transform:translate(-50%,-50%)}
+.play-btn:hover{transform:translate(-50%,-50%) scale(1.1);box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.play-btn svg{margin-left:3px}
+.video-gradient{position:absolute;bottom:0;left:0;right:0;padding:28px;background:linear-gradient(to top,rgba(0,0,0,.65),transparent);color:white;z-index:2}
+.video-gradient h4{font-size:14px;font-weight:600}
+.video-gradient p{font-size:12px;opacity:.75;margin-top:3px}
+
+/* Ratings */
+.ratings-row{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}
+.rating-card{display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:12px 20px;box-shadow:var(--shadow-xs);transition:all .2s}
+.rating-card:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.rating-logo{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:white;flex-shrink:0}
+.rating-score{font-size:1.4rem;font-weight:800;color:var(--gray-900)}
+.rating-star{color:var(--yellow);font-size:16px}
+.rating-name{font-size:14px;font-weight:600;color:var(--gray-600)}
+
+/* Partners */
+.partners{max-width:1320px;margin:0 auto;padding:30px 2rem 10px}
+.partners-label{font-size:13px;color:var(--gray-400);font-weight:500;margin-bottom:12px}
+.partner-logos{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.partner-item{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.3rem;color:var(--gray-900);opacity:.35;letter-spacing:-.5px;transition:opacity .3s}
+.partner-item:hover{opacity:.6}
+
+/* ============ STATS BAR ============ */
+.stats-bar{background:linear-gradient(135deg,var(--primary) 0%,#2563eb 100%);margin-top:30px}
+.stats-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-cell{text-align:center;padding:36px 20px;border-right:1px solid rgba(255,255,255,.12);color:white;position:relative;overflow:hidden}
+.stat-cell:last-child{border-right:none}
+.stat-cell::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.03),transparent);pointer-events:none}
+.stat-num{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:800;margin-bottom:2px;line-height:1}
+.stat-label{font-size:13px;opacity:.8;font-weight:400}
+
+/* ============ SECTIONS ============ */
+.section{padding:80px 0}
+.section-alt{background:var(--gray-50)}
+.section-inner{max-width:1320px;margin:0 auto;padding:0 2rem}
+.section-head{text-align:center;margin-bottom:48px}
+.section-badge{display:inline-flex;align-items:center;gap:8px;background:var(--primary-light);color:var(--primary);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:6px 18px;border-radius:100px;margin-bottom:14px}
+.section-head h2{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:800;color:var(--gray-900);letter-spacing:-.5px;line-height:1.2;margin-bottom:12px}
+.section-head p{font-size:15px;color:var(--gray-500);max-width:580px;margin:0 auto;line-height:1.7}
+
+/* ============ FEATURES ============ */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.f-card{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:32px;transition:all .35s;position:relative;overflow:hidden}
+.f-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transition:transform .35s;transform-origin:left}
+.f-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-color:transparent}
+.f-card:hover::before{transform:scaleX(1)}
+.f-card:nth-child(1)::before{background:var(--primary)}
+.f-card:nth-child(2)::before{background:var(--accent)}
+.f-card:nth-child(3)::before{background:var(--purple)}
+.f-card:nth-child(4)::before{background:var(--green)}
+.f-card:nth-child(5)::before{background:var(--teal)}
+.f-card:nth-child(6)::before{background:var(--red)}
+.f-icon{width:52px;height:52px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px}
+.f-card h3{font-size:16px;font-weight:700;color:var(--gray-900);margin-bottom:8px}
+.f-card p{font-size:14px;color:var(--gray-500);line-height:1.7}
+
+/* ============ TECH STACK ============ */
+.tech-sections{display:flex;flex-direction:column;gap:20px}
+.tech-group{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:28px 32px;transition:all .3s}
+.tech-group:hover{box-shadow:var(--shadow-md)}
+.tech-group-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.tech-group-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.tech-group-head h3{font-size:15px;font-weight:700;color:var(--gray-900)}
+.tech-group-head .count{font-size:12px;font-weight:600;color:var(--gray-400);background:var(--gray-100);padding:2px 10px;border-radius:100px;margin-left:auto}
+.tech-pills{display:flex;flex-wrap:wrap;gap:10px}
+.tech-pill{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-weight:500;color:var(--gray-600);transition:all .2s;cursor:default}
+.tech-pill:hover{background:var(--primary-50);color:var(--primary);border-color:rgba(23,70,162,.15);transform:translateY(-2px);box-shadow:var(--shadow-xs)}
+.tech-pill .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* ============ SYLLABUS ============ */
+.syllabus-list{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.syl-item{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;transition:all .3s}
+.syl-item:hover{box-shadow:var(--shadow-sm)}
+.syl-head{display:flex;align-items:center;gap:16px;padding:18px 24px;cursor:pointer;user-select:none;transition:background .15s}
+.syl-head:hover{background:var(--gray-50)}
+.syl-num{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:white;flex-shrink:0}
+.syl-text{flex:1}
+.syl-text h3{font-size:15px;font-weight:700;color:var(--gray-900);margin-bottom:2px}
+.syl-text .dur{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gray-400)}
+.syl-arrow{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--gray-200);display:flex;align-items:center;justify-content:center;color:var(--gray-400);flex-shrink:0;transition:all .3s}
+.syl-item.open .syl-arrow{background:var(--primary);border-color:var(--primary);color:white;transform:rotate(180deg)}
+.syl-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.syl-item.open .syl-body{max-height:500px}
+.syl-body-inner{padding:0 24px 20px 80px}
+.syl-tags{display:flex;flex-wrap:wrap;gap:8px}
+.syl-tag{padding:6px 14px;background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--radius);font-size:13px;font-weight:500;color:var(--gray-600);transition:all .15s}
+.syl-tag:hover{background:var(--primary-50);color:var(--primary)}
+
+/* ============ GLOBAL ============ */
+.global-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.g-card{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:36px 24px;text-align:center;transition:all .35s;position:relative;overflow:hidden}
+.g-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-xl);border-color:var(--primary)}
+.g-card:hover .g-flag{transform:scale(1.15)}
+.g-flag{font-size:3rem;margin-bottom:14px;display:block;transition:transform .35s}
+.g-card h4{font-size:16px;font-weight:700;color:var(--gray-900);margin-bottom:4px}
+.g-card p{font-size:13px;color:var(--gray-400)}
+
+/* ============ PROGRAM CARD ============ */
+.program-card{max-width:820px;margin:0 auto;background:white;border:2px solid var(--primary);border-radius:var(--radius-2xl);overflow:hidden;box-shadow:var(--shadow-xl)}
+.program-header{background:linear-gradient(135deg,var(--primary),#2563eb);padding:32px 40px;color:white;text-align:center}
+.program-header .badge{display:inline-block;background:rgba(255,255,255,.18);padding:5px 16px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;backdrop-filter:blur(4px)}
+.program-header h3{font-family:'Poppins',sans-serif;font-size:1.6rem;font-weight:800}
+.program-header p{font-size:14px;opacity:.85;margin-top:6px}
+.program-body{padding:40px}
+.program-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-bottom:2rem}
+.pf{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--gray-600);line-height:1.5}
+.pf-check{width:22px;height:22px;border-radius:50%;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px;font-weight:700}
+.program-cta-btn{display:block;width:100%;text-align:center;padding:16px;background:var(--accent);color:white;font-family:'Inter',sans-serif;font-size:16px;font-weight:700;border:none;border-radius:var(--radius-lg);cursor:pointer;text-decoration:none;transition:all .3s;box-shadow:0 4px 16px rgba(242,101,34,.25)}
+.program-cta-btn:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(242,101,34,.3)}
+
+/* ============ TESTIMONIALS ============ */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.t-card{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:32px;transition:all .35s}
+.t-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.t-stars{color:var(--yellow);font-size:16px;margin-bottom:14px;letter-spacing:2px}
+.t-card blockquote{font-size:14px;color:var(--gray-600);line-height:1.8;font-style:italic;margin-bottom:18px}
+.t-author{display:flex;align-items:center;gap:12px}
+.t-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:white;flex-shrink:0}
+.t-author-info h4{font-size:14px;font-weight:700;color:var(--gray-900)}
+.t-author-info p{font-size:12px;color:var(--gray-400)}
+
+/* ============ FOUNDER ============ */
+.founder-card{display:flex;align-items:center;gap:3rem;max-width:880px;margin:0 auto;background:white;border:1px solid var(--gray-200);border-radius:var(--radius-2xl);padding:48px;box-shadow:var(--shadow-lg)}
+.founder-avatar{width:130px;height:130px;border-radius:var(--radius-2xl);background:linear-gradient(135deg,var(--primary),#2563eb);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:3rem;font-weight:800;color:white;flex-shrink:0;position:relative;overflow:hidden}
+.founder-avatar::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 50%,rgba(255,255,255,.1));pointer-events:none}
+.founder-info h3{font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:800;color:var(--gray-900);margin-bottom:4px}
+.founder-role{color:var(--primary);font-size:14px;font-weight:600;margin-bottom:14px}
+.founder-info p{font-size:14px;color:var(--gray-500);line-height:1.8}
+
+/* ============ CONTACT SECTION ============ */
+.contact-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:3rem}
+.contact-cards{display:flex;flex-direction:column;gap:14px}
+.c-card{display:flex;align-items:center;gap:16px;background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:20px 24px;transition:all .25s}
+.c-card:hover{border-color:var(--primary);box-shadow:var(--shadow-sm);transform:translateX(4px)}
+.c-icon{width:48px;height:48px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.c-card h4{font-size:13px;font-weight:700;color:var(--gray-900);margin-bottom:2px}
+.c-card p,.c-card a{font-size:14px;color:var(--gray-500);text-decoration:none}
+.c-card a:hover{color:var(--primary)}
+.social-row{display:flex;gap:12px;margin-top:10px}
+.social-btn{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--gray-200);background:white;color:var(--gray-500);transition:all .25s}
+.social-btn:hover{color:var(--primary);border-color:var(--primary);transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+
+/* Enrollment form */
+.enroll-card{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-2xl);padding:36px;box-shadow:var(--shadow-lg)}
+.enroll-card h3{font-family:'Poppins',sans-serif;font-size:1.2rem;font-weight:800;color:var(--gray-900);margin-bottom:6px}
+.enroll-card .sub{font-size:13px;color:var(--gray-400);margin-bottom:24px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:13px;font-weight:600;color:var(--gray-700);margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;border:1.5px solid var(--gray-200);border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:14px;color:var(--gray-900);background:white;outline:none;transition:all .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(23,70,162,.06)}
+.fg textarea{resize:vertical;min-height:70px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn-enroll{width:100%;padding:14px;background:var(--accent);color:white;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;border:none;border-radius:var(--radius);cursor:pointer;transition:all .25s;box-shadow:0 4px 16px rgba(242,101,34,.2)}
+.btn-enroll:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 8px 24px rgba(242,101,34,.3)}
+
+/* ============ QUERY WIDGET ============ */
+.query-widget{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:998;width:310px;background:white;border-radius:16px 0 0 16px;box-shadow:-4px 4px 32px rgba(0,0,0,.12);transition:all .4s cubic-bezier(.4,0,.2,1);overflow:hidden}
+.query-widget.collapsed .query-body{display:none}
+.query-widget.collapsed{border-radius:10px 0 0 10px}
+.query-head{background:var(--accent);color:white;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
+.query-head h4{font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px}
+.query-head .live-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2s ease infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.query-toggle-btn{background:none;border:none;color:white;font-size:18px;cursor:pointer;padding:0;transition:transform .3s;line-height:1}
+.query-widget.collapsed .query-toggle-btn{transform:rotate(180deg)}
+.query-body{padding:20px}
+.query-phone-row{display:flex;align-items:center;gap:12px;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--gray-100)}
+.query-phone-icon{width:36px;height:36px;border-radius:50%;background:var(--green-light);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.query-phone-info a{font-size:15px;font-weight:700;color:var(--primary);text-decoration:none}
+.query-phone-info p{font-size:11px;color:var(--gray-400)}
+.query-form .fg{margin-bottom:12px}
+.query-form .fg input,.query-form .fg textarea{padding:10px 12px;font-size:13px}
+.query-form textarea{min-height:60px}
+.btn-query{width:100%;padding:12px;background:var(--red);color:white;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;border:none;border-radius:var(--radius);cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.5px}
+.btn-query:hover{background:#b91c1c}
+
+/* ============ WHATSAPP ============ */
+.wa-float{position:fixed;bottom:24px;left:24px;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:998;text-decoration:none;transition:all .3s;animation:waFloat 3s ease infinite}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.5)}
+.wa-float svg{width:28px;height:28px;fill:white}
+@keyframes waFloat{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 28px rgba(37,211,102,.55),0 0 0 10px rgba(37,211,102,.06)}}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--navy);color:white;padding:56px 0 0}
+.footer-inner{max-width:1320px;margin:0 auto;padding:0 2rem}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-brand .f-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.footer-brand .f-logo-mark{width:40px;height:40px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:800;font-size:14px;color:white}
+.footer-brand .f-logo-name{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.15rem}
+.footer-brand .f-logo-name span{color:#60a5fa}
+.footer-brand p{font-size:14px;color:#94a3b8;line-height:1.8;max-width:300px}
+.footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px;color:#94a3b8}
+.footer-col a{display:block;color:#cbd5e1;text-decoration:none;font-size:14px;padding:5px 0;transition:color .2s}
+.footer-col a:hover{color:#60a5fa}
+.footer-bottom{padding:20px 0;text-align:center;font-size:13px;color:#475569}
+
+/* ============ TOAST ============ */
+.toast{position:fixed;bottom:24px;right:24px;background:white;border:1px solid var(--green-light);color:var(--green);padding:16px 24px;border-radius:var(--radius-lg);font-size:14px;font-weight:600;z-index:9999;transform:translateY(100px);opacity:0;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:var(--shadow-xl);display:flex;align-items:center;gap:10px}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1100px){
+.hero{grid-template-columns:1fr;gap:2rem}
+.features-grid{grid-template-columns:repeat(2,1fr)}
+.global-grid{grid-template-columns:repeat(2,1fr)}
+.program-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+.testimonials-grid{grid-template-columns:1fr}
+.query-widget{display:none}
+.cat-dropdown{width:500px;grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+.topbar-right{display:none}
+.topbar-inner{justify-content:center}
+.nav-search-wrap,.nav-divider{display:none}
+.mobile-menu-btn{display:flex}
+.nav-right{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:white;flex-direction:column;padding:80px 24px 24px;gap:0;transition:right .35s ease;box-shadow:-4px 0 24px rgba(0,0,0,.1);z-index:1001;align-items:stretch}
+.nav-right.open{right:0}
+.nav-link{padding:14px 0;font-size:15px;border-bottom:1px solid var(--gray-100);border-radius:0}
+.hero{padding:16px 1.5rem 30px}
+.hero-content h1{font-size:1.7rem}
+.features-grid{grid-template-columns:1fr}
+.stats-inner{grid-template-columns:repeat(2,1fr)}
+.stat-cell{padding:20px 12px}
+.stat-num{font-size:1.5rem}
+.contact-layout{grid-template-columns:1fr}
+.form-row{grid-template-columns:1fr}
+.founder-card{flex-direction:column;text-align:center;padding:32px}
+.footer-grid{grid-template-columns:1fr}
+.global-grid{grid-template-columns:1fr 1fr}
+.browse-inner{padding:0 1rem}
+.cat-dropdown{width:100%;left:0;right:0;grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- =========== TOP BAR =========== -->
+<div class="topbar">
+<div class="topbar-inner">
+<div class="topbar-left">
+<a href="tel:+917993822600">📞 New Course Enquiry : <strong>+91-7993822600</strong></a>
+<a href="mailto:anumulastty.1@gmail.com">✉️ anumulastty.1@gmail.com</a>
+</div>
+<div class="topbar-right">
+<span class="topbar-promo">🔥 ENROLL NOW</span>
+<span class="topbar-timer">Limited Seats | Next Batch Starting Soon</span>
+<a href="#enroll" class="topbar-cta">GRAB YOUR SEAT →</a>
+</div>
+</div>
+</div>
+
+<!-- =========== NAVBAR =========== -->
+<nav class="navbar" id="navbar">
+<div class="navbar-inner">
+<a href="#" class="nav-logo">
+<div class="logo-mark">CB</div>
+<div>
+<div class="logo-name">Cloud<span>Bridge</span></div>
+<span class="logo-sub">DevOps Consulting</span>
+</div>
+</a>
+
+<div style="position:relative">
+<button class="cat-btn" id="catBtn" onclick="toggleCat()">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+Categories
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="cat-dropdown" id="catDrop">
+<a href="#tech"><span class="cat-dot" style="background:var(--primary)"></span>AWS Cloud</a>
+<a href="#tech"><span class="cat-dot" style="background:#2563eb"></span>DevOps</a>
+<a href="#tech"><span class="cat-dot" style="background:var(--purple)"></span>DevSecOps</a>
+<a href="#tech"><span class="cat-dot" style="background:#0891b2"></span>Kubernetes</a>
+<a href="#tech"><span class="cat-dot" style="background:var(--green)"></span>Terraform</a>
+<a href="#tech"><span class="cat-dot" style="background:#dc2626"></span>Docker</a>
+<a href="#tech"><span class="cat-dot" style="background:var(--accent)"></span>CI/CD Pipelines</a>
+<a href="#tech"><span class="cat-dot" style="background:#64748b"></span>Linux</a>
+<a href="#tech"><span class="cat-dot" style="background:var(--yellow)"></span>Monitoring</a>
+<a href="#tech"><span class="cat-dot" style="background:#ec4899"></span>Security Tools</a>
+<a href="#tech"><span class="cat-dot" style="background:#14b8a6"></span>Multi-Cloud</a>
+<a href="#tech"><span class="cat-dot" style="background:#6366f1"></span>GitOps</a>
+</div>
+</div>
+
+<div class="nav-search-wrap">
+<svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+<input class="nav-search" type="text" placeholder="Search courses, tools, topics..." onfocus="openSearch()" readonly>
+</div>
+
+<div class="nav-right" id="navRight">
+<a href="#features" class="nav-link">All Courses</a>
+<a href="#curriculum" class="nav-link">Curriculum</a>
+<a href="#contact" class="nav-link">Resources</a>
+<span class="nav-divider"></span>
+<button class="btn-signup" onclick="openSearch()">Sign up</button>
+<button class="btn-login" onclick="location.href='#enroll'">Log in</button>
+</div>
+
+<div class="mobile-menu-btn" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</div>
+</nav>
+
+<!-- =========== BROWSE BAR =========== -->
+<div class="browse-bar">
+<div class="browse-inner">
+<span class="browse-label">Browse Courses ▾</span>
+<a href="#tech" class="browse-link">AWS</a>
+<a href="#tech" class="browse-link active">DevOps</a>
+<a href="#tech" class="browse-link">DevSecOps</a>
+<a href="#tech" class="browse-link">Kubernetes</a>
+<a href="#tech" class="browse-link">Docker</a>
+<a href="#tech" class="browse-link">Terraform</a>
+<a href="#tech" class="browse-link">CI/CD</a>
+<a href="#tech" class="browse-link">Cloud Computing</a>
+<a href="#tech" class="browse-link">Linux</a>
+<a href="#tech" class="browse-link">Monitoring</a>
+<a href="#tech" class="browse-link">Security</a>
+</div>
+</div>
+
+<!-- =========== SEARCH OVERLAY =========== -->
+<div class="search-overlay" id="searchOverlay">
+<div class="search-overlay-header">
+<button class="search-back" onclick="closeSearch()">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+</button>
+<input class="search-overlay-input" type="text" placeholder="Search courses..." autofocus id="searchInput">
+</div>
+<div class="search-overlay-body">
+<div>
+<div class="search-col">
+<h3>Popular Searches</h3>
+<div class="search-links">
+<a href="#tech">aws</a>
+<a href="#tech">devops</a>
+<a href="#tech">kubernetes</a>
+<a href="#tech">terraform</a>
+<a href="#tech">docker</a>
+<a href="#tech">ci/cd pipelines</a>
+<a href="#tech">devsecops</a>
+</div>
+</div>
+<div class="search-col" style="margin-top:28px">
+<h3>Popular Course Categories</h3>
+<div class="search-categories">
+<a href="#tech" class="search-cat-chip">AWS Cloud</a>
+<a href="#tech" class="search-cat-chip">DevOps</a>
+<a href="#tech" class="search-cat-chip">DevSecOps</a>
+<a href="#tech" class="search-cat-chip">Kubernetes</a>
+<a href="#tech" class="search-cat-chip">CI/CD Pipelines</a>
+<a href="#tech" class="search-cat-chip">Monitoring</a>
+</div>
+</div>
+</div>
+<div>
+<div class="search-col">
+<h3>Popular Courses</h3>
+<div class="popular-courses">
+<div class="pop-course-card">
+<div class="pop-course-badge">Flagship Program</div>
+<h4>DevOps & AWS Career Transformation</h4>
+<div class="pop-course-meta">🔥 90-Day Intensive · 50+ Tools</div>
+<a href="#enroll" class="pop-course-link" onclick="closeSearch()">KNOW MORE →</a>
+</div>
+<div class="pop-course-card">
+<div class="pop-course-badge">Production Training</div>
+<h4>Kubernetes & EKS Mastery</h4>
+<div class="pop-course-meta">☸️ Real-world EKS Deployments</div>
+<a href="#curriculum" class="pop-course-link" onclick="closeSearch()">KNOW MORE →</a>
+</div>
+<div class="pop-course-card">
+<h4>DevSecOps Pipeline Engineering</h4>
+<div class="pop-course-meta">🛡️ SAST · DAST · Container Security</div>
+<a href="#curriculum" class="pop-course-link" onclick="closeSearch()">KNOW MORE →</a>
+</div>
+</div>
+</div>
+<a href="#curriculum" class="pop-course-link" style="margin-top:12px;color:var(--primary)" onclick="closeSearch()">View All Courses →</a>
+</div>
+</div>
+</div>
+
+<!-- =========== BREADCRUMB =========== -->
+<div class="breadcrumb">
+<a href="#">Home</a> &gt; <a href="#">All Courses</a> &gt; <strong>DevOps & AWS Training Program</strong>
+</div>
+
+<!-- =========== HERO =========== -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>DevOps & AWS<br>Career Transformation</h1>
+<div class="hero-tagline">Become a Production-Ready DevOps Engineer for Global Markets</div>
+<p class="hero-desc">CloudBridge DevOps Consulting provides real-time, production-based AWS & DevOps training — not sandbox demos. Our 90-day intensive program covers end-to-end automation: from Linux fundamentals to Kubernetes, Terraform, CI/CD pipelines, DevSecOps, and multi-cloud architecture. Designed for freshers and domain-change professionals targeting roles in US, Australia, Singapore & Canada.</p>
+<a href="#enroll" class="hero-cta">Explore DevOps Training Program →</a>
+<div class="partners" style="padding:28px 0 0;max-width:none">
+<div class="partners-label">Our Program Covers Technologies Used By :</div>
+<div class="partner-logos">
+<span class="partner-item">AWS</span>
+<span class="partner-item">Google Cloud</span>
+<span class="partner-item">Microsoft Azure</span>
+<span class="partner-item">Kubernetes</span>
+<span class="partner-item">HashiCorp</span>
+</div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="video-card">
+<div class="video-card-content">
+<div class="icon">☁️</div>
+<h3>CloudBridge DevOps Consulting</h3>
+<p>90-Day Intensive · Production-Level Training</p>
+</div>
+<div class="play-btn">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="var(--primary)"><polygon points="9,6 19,12 9,18"/></svg>
+</div>
+<div class="video-gradient">
+<h4>Watch: What You'll Build in 90 Days</h4>
+<p>Real production pipelines, EKS clusters & DevSecOps workflows</p>
+</div>
+</div>
+<div class="ratings-row">
+<div class="rating-card">
+<div class="rating-logo" style="background:#4285f4">G</div>
+<span class="rating-score">4.9</span>
+<span class="rating-star">★</span>
+<span class="rating-name">Google</span>
+</div>
+<div class="rating-card">
+<div class="rating-logo" style="background:#7c3aed">S</div>
+<span class="rating-score">4.8</span>
+<span class="rating-star">★</span>
+<span class="rating-name">Students</span>
+</div>
+<div class="rating-card">
+<div class="rating-logo" style="background:#0ea14f">M</div>
+<span class="rating-score">5.0</span>
+<span class="rating-star">★</span>
+<span class="rating-name">Mentoring</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- =========== STATS BAR =========== -->
+<div class="stats-bar">
+<div class="stats-inner">
+<div class="stat-cell"><div class="stat-num" data-target="90">0</div><div class="stat-label">Days Intensive Training</div></div>
+<div class="stat-cell"><div class="stat-num" data-target="50">0</div><div class="stat-label">Production Tools Covered</div></div>
+<div class="stat-cell"><div class="stat-num">1:1</div><div class="stat-label">Personal Mentoring Sessions</div></div>
+<div class="stat-cell"><div class="stat-num" data-target="4">0</div><div class="stat-label">Global Target Markets</div></div>
+</div>
+</div>
+
+<!-- =========== FEATURES =========== -->
+<section class="section section-alt" id="features">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">Why CloudBridge</div>
+<h2>Not Just Training. Career Transformation.</h2>
+<p>We don't teach tools in isolation. We build production-ready engineers through real-world architecture and deployment experience.</p>
+</div>
+<div class="features-grid">
+<div class="f-card reveal"><div class="f-icon" style="background:var(--primary-light)">⚡</div><h3>Production-Level Training</h3><p>Learn on real AWS infrastructure — not sandboxes. Build actual CI/CD pipelines, EKS clusters, and multi-environment architectures used in enterprise production.</p></div>
+<div class="f-card reveal reveal-delay-1"><div class="f-icon" style="background:var(--accent-light)">🎯</div><h3>1-on-1 Mentoring</h3><p>Personal guidance from a senior DevSecOps engineer. Get code reviews, architecture feedback, and career coaching tailored to your target market.</p></div>
+<div class="f-card reveal reveal-delay-2"><div class="f-icon" style="background:var(--purple-light)">🔒</div><h3>DevSecOps First</h3><p>Security isn't an afterthought. Learn SAST, DAST, container scanning, secrets management, and compliance automation from Day 1.</p></div>
+<div class="f-card reveal"><div class="f-icon" style="background:var(--green-light)">🌍</div><h3>Global Interview Prep</h3><p>Targeted preparation for US, Australia, Singapore & Canada markets. Scenario-based interviews, system design, and resume optimization.</p></div>
+<div class="f-card reveal reveal-delay-1"><div class="f-icon" style="background:var(--teal-light)">🏗️</div><h3>Multi-Cloud Expertise</h3><p>Deep AWS focus with strategic Azure & GCP exposure. Master cloud-agnostic patterns with Terraform and Kubernetes.</p></div>
+<div class="f-card reveal reveal-delay-2"><div class="f-icon" style="background:var(--red-light)">📈</div><h3>Career Placement Support</h3><p>Resume building, LinkedIn optimization, portfolio projects, and mock interviews. We're invested in your placement success.</p></div>
+</div>
+</div>
+</section>
+
+<!-- =========== TECH STACK =========== -->
+<section class="section" id="tech">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">Technology Stack</div>
+<h2>End-to-End Tools You Will Master</h2>
+<p>50+ industry-standard tools across cloud, DevOps, security, monitoring, and automation.</p>
+</div>
+<div class="tech-sections">
+<div class="tech-group reveal">
+<div class="tech-group-head"><div class="tech-group-icon" style="background:#dbeafe">☁️</div><h3>Cloud Platforms & AWS Services</h3><span class="count">14 tools</span></div>
+<div class="tech-pills">
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>AWS</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>Azure</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>GCP</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>AWS EKS</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>EC2</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>S3</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>RDS</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>Lambda</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>VPC</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>IAM</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>CloudWatch</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>Route 53</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>CloudFront</span>
+<span class="tech-pill"><span class="dot" style="background:#3b82f6"></span>API Gateway</span>
+</div></div>
+<div class="tech-group reveal">
+<div class="tech-group-head"><div class="tech-group-icon" style="background:#e0e7ff">🔧</div><h3>DevOps & CI/CD Tools</h3><span class="count">12 tools</span></div>
+<div class="tech-pills">
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Docker</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Kubernetes</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Terraform</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Ansible</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Helm</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>ArgoCD</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Jenkins</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>GitHub Actions</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>GitLab CI</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Git</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>GitHub</span>
+<span class="tech-pill"><span class="dot" style="background:#6366f1"></span>Nexus</span>
+</div></div>
+<div class="tech-group reveal">
+<div class="tech-group-head"><div class="tech-group-icon" style="background:#f3e8ff">🛡️</div><h3>Security & DevSecOps</h3><span class="count">9 tools</span></div>
+<div class="tech-pills">
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>SonarQube</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>Trivy</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>OWASP ZAP</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>Snyk</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>Vault</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>Checkov</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>Falco</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>AWS GuardDuty</span>
+<span class="tech-pill"><span class="dot" style="background:#a855f7"></span>AWS WAF</span>
+</div></div>
+<div class="tech-group reveal">
+<div class="tech-group-head"><div class="tech-group-icon" style="background:#dcfce7">📊</div><h3>Monitoring & Observability</h3><span class="count">7 tools</span></div>
+<div class="tech-pills">
+<span class="tech-pill"><span class="dot" style="background:#16a34a"></span>Prometheus</span>
+<span class="tech-pill"><span class="dot" style="background:#16a34a"></span>Grafana</span>
+<span class="tech-pill"><span class="dot" style="background:#16a34a"></span>ELK Stack</span>
+<span class="tech-pill"><span class="dot" style="background:#16a34a"></span>Loki</span>
+<span class="tech-pill"><span class="dot" style="background:#16a34a"></span>Datadog</span>
+<span class="tech-pill"><span class="dot" style="background:#16a34a"></span>PagerDuty</span>
+<span class="tech-pill"><span class="dot" style="background:#16a34a"></span>Jaeger</span>
+</div></div>
+<div class="tech-group reveal">
+<div class="tech-group-head"><div class="tech-group-icon" style="background:#ffedd5">🖥️</div><h3>Infrastructure & Scripting</h3><span class="count">10 tools</span></div>
+<div class="tech-pills">
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>Linux</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>Nginx</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>HAProxy</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>Redis</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>PostgreSQL</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>MongoDB</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>Bash Scripting</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>Python</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>YAML</span>
+<span class="tech-pill"><span class="dot" style="background:#ea580c"></span>Groovy</span>
+</div></div>
+</div>
+</div>
+</section>
+
+<!-- =========== CURRICULUM =========== -->
+<section class="section section-alt" id="curriculum">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">90-Day Curriculum</div>
+<h2>End-to-End Production DevOps Mastery</h2>
+<p>A structured program from fundamentals to deploying production-grade infrastructure.</p>
+</div>
+<div class="syllabus-list">
+<div class="syl-item open reveal"><div class="syl-head" onclick="toggleSyl(this)"><div class="syl-num" style="background:var(--primary)">01</div><div class="syl-text"><h3>Foundation & Linux Mastery</h3><div class="dur">Week 1–2 · Days 1–14</div></div><div class="syl-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="syl-body"><div class="syl-body-inner"><div class="syl-tags"><span class="syl-tag">Linux Administration</span><span class="syl-tag">Shell Scripting</span><span class="syl-tag">Networking</span><span class="syl-tag">Git & GitHub</span><span class="syl-tag">SSH & Security</span><span class="syl-tag">File Systems</span><span class="syl-tag">Process Management</span><span class="syl-tag">Cron Jobs</span><span class="syl-tag">Vim & CLI</span><span class="syl-tag">Python for DevOps</span></div></div></div></div>
+<div class="syl-item reveal"><div class="syl-head" onclick="toggleSyl(this)"><div class="syl-num" style="background:#2563eb">02</div><div class="syl-text"><h3>AWS Cloud Architecture</h3><div class="dur">Week 3–5 · Days 15–35</div></div><div class="syl-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="syl-body"><div class="syl-body-inner"><div class="syl-tags"><span class="syl-tag">VPC & Networking</span><span class="syl-tag">EC2 & Auto Scaling</span><span class="syl-tag">S3 & CloudFront</span><span class="syl-tag">RDS & DynamoDB</span><span class="syl-tag">IAM & Security</span><span class="syl-tag">Lambda</span><span class="syl-tag">Route 53</span><span class="syl-tag">CloudWatch</span><span class="syl-tag">ELB</span><span class="syl-tag">Cost Optimization</span></div></div></div></div>
+<div class="syl-item reveal"><div class="syl-head" onclick="toggleSyl(this)"><div class="syl-num" style="background:var(--purple)">03</div><div class="syl-text"><h3>Containers & Orchestration</h3><div class="dur">Week 6–8 · Days 36–56</div></div><div class="syl-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="syl-body"><div class="syl-body-inner"><div class="syl-tags"><span class="syl-tag">Docker Deep Dive</span><span class="syl-tag">Docker Compose</span><span class="syl-tag">Multi-Stage Builds</span><span class="syl-tag">Kubernetes</span><span class="syl-tag">AWS EKS</span><span class="syl-tag">Helm Charts</span><span class="syl-tag">Ingress</span><span class="syl-tag">RBAC</span><span class="syl-tag">Service Mesh</span></div></div></div></div>
+<div class="syl-item reveal"><div class="syl-head" onclick="toggleSyl(this)"><div class="syl-num" style="background:var(--green)">04</div><div class="syl-text"><h3>IaC & CI/CD Pipelines</h3><div class="dur">Week 9–10 · Days 57–70</div></div><div class="syl-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="syl-body"><div class="syl-body-inner"><div class="syl-tags"><span class="syl-tag">Terraform</span><span class="syl-tag">Terraform Modules</span><span class="syl-tag">Ansible</span><span class="syl-tag">GitHub Actions</span><span class="syl-tag">Jenkins</span><span class="syl-tag">ArgoCD GitOps</span><span class="syl-tag">Blue-Green</span><span class="syl-tag">Canary</span><span class="syl-tag">Artifacts</span></div></div></div></div>
+<div class="syl-item reveal"><div class="syl-head" onclick="toggleSyl(this)"><div class="syl-num" style="background:var(--yellow)">05</div><div class="syl-text"><h3>DevSecOps & Monitoring</h3><div class="dur">Week 11–12 · Days 71–84</div></div><div class="syl-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="syl-body"><div class="syl-body-inner"><div class="syl-tags"><span class="syl-tag">SonarQube SAST</span><span class="syl-tag">Trivy</span><span class="syl-tag">OWASP ZAP</span><span class="syl-tag">Vault</span><span class="syl-tag">Checkov</span><span class="syl-tag">Falco</span><span class="syl-tag">Prometheus</span><span class="syl-tag">Grafana</span><span class="syl-tag">ELK / Loki</span><span class="syl-tag">GuardDuty</span></div></div></div></div>
+<div class="syl-item reveal"><div class="syl-head" onclick="toggleSyl(this)"><div class="syl-num" style="background:#ec4899">06</div><div class="syl-text"><h3>Capstone Project & Career Launch</h3><div class="dur">Week 13 · Days 85–90</div></div><div class="syl-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="syl-body"><div class="syl-body-inner"><div class="syl-tags"><span class="syl-tag">Production Project</span><span class="syl-tag">Full Pipeline</span><span class="syl-tag">System Design</span><span class="syl-tag">Resume</span><span class="syl-tag">LinkedIn</span><span class="syl-tag">Mock Interviews</span><span class="syl-tag">Salary Negotiation</span><span class="syl-tag">Portfolio</span></div></div></div></div>
+</div>
+</div>
+</section>
+
+<!-- =========== GLOBAL =========== -->
+<section class="section">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">Global Reach</div>
+<h2>Designed for International Markets</h2>
+<p>Our curriculum is tailored for professionals targeting high-paying DevOps roles across these regions.</p>
+</div>
+<div class="global-grid reveal">
+<div class="g-card"><span class="g-flag">🇺🇸</span><h4>United States</h4><p>Silicon Valley Standards</p></div>
+<div class="g-card"><span class="g-flag">🇦🇺</span><h4>Australia</h4><p>Growing Tech Demand</p></div>
+<div class="g-card"><span class="g-flag">🇸🇬</span><h4>Singapore</h4><p>APAC Tech Hub</p></div>
+<div class="g-card"><span class="g-flag">🇨🇦</span><h4>Canada</h4><p>Immigration-Friendly Tech</p></div>
+</div>
+</div>
+</section>
+
+<!-- =========== PROGRAM =========== -->
+<section class="section section-alt">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">Program</div>
+<h2>What You Get</h2>
+</div>
+<div class="program-card reveal">
+<div class="program-header">
+<div class="badge">90-Day Intensive</div>
+<h3>DevOps Career Transformation Program</h3>
+<p>Online Only · Live Sessions · Globally Accessible</p>
+</div>
+<div class="program-body">
+<div class="program-grid">
+<div class="pf"><div class="pf-check">✓</div><span>90 days structured end-to-end training</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>50+ production tools covered</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>1-on-1 personal mentoring</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>Group classes with live coding</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>Real production AWS access</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>Multi-cloud: AWS, Azure, GCP</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>Full DevSecOps pipeline</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>Capstone project for portfolio</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>Global interview prep & mocks</span></div>
+<div class="pf"><div class="pf-check">✓</div><span>Lifetime access to materials</span></div>
+</div>
+<a href="#enroll" class="program-cta-btn">Enroll Now — Start Your Transformation →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- =========== TESTIMONIALS =========== -->
+<section class="section">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">Testimonials</div>
+<h2>What Our Students Say</h2>
+</div>
+<div class="testimonials-grid reveal">
+<div class="t-card">
+<div class="t-stars">★★★★★</div>
+<blockquote>"The production-level training was exactly what I needed. Within 60 days, I was deploying EKS clusters and writing Terraform modules with confidence. Got placed in a DevOps role targeting US clients!"</blockquote>
+<div class="t-author"><div class="t-avatar" style="background:var(--primary)">RK</div><div class="t-author-info"><h4>Ravi Kumar</h4><p>Fresher → DevOps Engineer</p></div></div>
+</div>
+<div class="t-card">
+<div class="t-stars">★★★★★</div>
+<blockquote>"I switched from manual testing to DevOps. The 1-on-1 mentoring made all the difference — Anil personally reviewed my projects and prepared me for real interview scenarios."</blockquote>
+<div class="t-author"><div class="t-avatar" style="background:var(--purple)">PS</div><div class="t-author-info"><h4>Priya Sharma</h4><p>QA → DevSecOps Engineer</p></div></div>
+</div>
+<div class="t-card">
+<div class="t-stars">★★★★★</div>
+<blockquote>"Best DevOps training I've attended. The curriculum covers everything from Linux to advanced Kubernetes patterns. The CI/CD pipeline project alone was worth the entire program."</blockquote>
+<div class="t-author"><div class="t-avatar" style="background:var(--accent)">AM</div><div class="t-author-info"><h4>Ahmed M.</h4><p>SysAdmin → Cloud Engineer</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- =========== FOUNDER =========== -->
+<section class="section section-alt">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">Mentor</div>
+<h2>Meet Your Instructor</h2>
+</div>
+<div class="founder-card reveal">
+<div class="founder-avatar">AK</div>
+<div class="founder-info">
+<h3>Anil Kumar Anumulasetty</h3>
+<div class="founder-role">Founder & Lead DevSecOps Mentor · CloudBridge DevOps Consulting</div>
+<p>Senior DevSecOps Engineer with deep expertise in AWS infrastructure, Kubernetes, Terraform automation, and building production-grade CI/CD pipelines. Based in Hyderabad, Anil brings real-world enterprise experience to every training session — teaching the architectures and practices he implements daily on production systems. His mission: transform aspiring engineers into globally competitive DevOps professionals.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- =========== CONTACT & ENROLL =========== -->
+<section class="section" id="contact">
+<div class="section-inner">
+<div class="section-head reveal">
+<div class="section-badge">Contact</div>
+<h2>Get In Touch</h2>
+<p>Ready to start your DevOps career transformation?</p>
+</div>
+<div class="contact-layout reveal">
+<div class="contact-cards">
+<div class="c-card"><div class="c-icon" style="background:#dbeafe">📧</div><div><h4>Email</h4><a href="mailto:anumulastty.1@gmail.com">anumulastty.1@gmail.com</a></div></div>
+<div class="c-card"><div class="c-icon" style="background:#dcfce7">📱</div><div><h4>Phone / WhatsApp</h4><a href="tel:+917993822600">+91-7993822600</a></div></div>
+<div class="c-card"><div class="c-icon" style="background:#ffedd5">📍</div><div><h4>Location</h4><p>Hyderabad, India</p></div></div>
+<div class="c-card"><div class="c-icon" style="background:#f3e8ff">🕐</div><div><h4>Training Mode</h4><p>Online Only · Flexible Timings</p></div></div>
+<div class="social-row">
+<a href="https://www.facebook.com/profile.php?id=61588159723801" target="_blank" class="social-btn" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+<a href="https://www.instagram.com/anumulasetty.1/" target="_blank" class="social-btn" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+<a href="https://www.youtube.com/@cloudbridgedevops" target="_blank" class="social-btn" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+</div>
+</div>
+<div class="enroll-card" id="enroll">
+<h3>📋 Enrollment Form</h3>
+<p class="sub">Fill in your details and we'll connect with you on WhatsApp instantly.</p>
+<form id="enrollForm" onsubmit="handleSubmit(event)">
+<div class="form-row"><div class="fg"><label>Full Name *</label><input type="text" name="name" required placeholder="Your full name"></div><div class="fg"><label>Email *</label><input type="email" name="email" required placeholder="your@email.com"></div></div>
+<div class="form-row"><div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" required placeholder="+1 234 567 8900"></div><div class="fg"><label>Country *</label><select name="country" required><option value="">Select country</option><option value="US">🇺🇸 United States</option><option value="AU">🇦🇺 Australia</option><option value="SG">🇸🇬 Singapore</option><option value="CA">🇨🇦 Canada</option><option value="IN">🇮🇳 India</option><option value="UK">🇬🇧 United Kingdom</option><option value="DE">🇩🇪 Germany</option><option value="OTHER">Other</option></select></div></div>
+<div class="fg"><label>Current Role *</label><select name="role" required><option value="">Select role</option><option>Fresher / Student</option><option>Domain Change Professional</option><option>Software Developer</option><option>System Administrator</option><option>QA / Testing</option><option>DevOps Beginner</option><option>Other</option></select></div>
+<div class="form-row"><div class="fg"><label>Experience</label><select name="experience"><option>0-1 Years</option><option>1-3 Years</option><option>3-5 Years</option><option>5+ Years</option></select></div><div class="fg"><label>Preferred Timing</label><select name="timing"><option>Morning (IST)</option><option>Evening (IST)</option><option>Weekends Only</option><option>Flexible</option></select></div></div>
+<div class="fg"><label>Why DevOps?</label><textarea name="message" placeholder="Tell us about your goals..."></textarea></div>
+<button type="submit" class="btn-enroll">Submit & Connect on WhatsApp →</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- =========== FOOTER =========== -->
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="f-logo"><div class="f-logo-mark">CB</div><div class="f-logo-name">Cloud<span>Bridge</span></div></div>
+<p>Global DevOps career transformation brand producing production-ready engineers for international markets. Founded by Anil Kumar Anumulasetty.</p>
+</div>
+<div class="footer-col"><h4>Program</h4><a href="#features">Why CloudBridge</a><a href="#curriculum">Curriculum</a><a href="#tech">Tech Stack</a><a href="#enroll">Enroll Now</a></div>
+<div class="footer-col"><h4>Connect</h4><a href="https://www.youtube.com/@cloudbridgedevops" target="_blank">YouTube</a><a href="https://www.instagram.com/anumulasetty.1/" target="_blank">Instagram</a><a href="https://www.facebook.com/profile.php?id=61588159723801" target="_blank">Facebook</a><a href="mailto:anumulastty.1@gmail.com">Email Us</a></div>
+<div class="footer-col"><h4>Contact</h4><a href="tel:+917993822600">+91-7993822600</a><a href="#">Hyderabad, India</a><a href="#">Online Training Only</a><a href="#">Flexible Timings</a></div>
+</div>
+<div class="footer-bottom">© 2025 CloudBridge DevOps Consulting. All rights reserved.</div>
+</div>
+</footer>
+
+<!-- =========== QUERY WIDGET =========== -->
+<div class="query-widget" id="queryWidget">
+<div class="query-head" onclick="toggleQuery()"><h4>Drop us a Query <span class="live-dot"></span></h4><button class="query-toggle-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button></div>
+<div class="query-body">
+<div class="query-phone-row"><div class="query-phone-icon">📞</div><div class="query-phone-info"><a href="tel:+917993822600">+91 7993822600</a><p>Available 24x7 for your queries</p></div></div>
+<form class="query-form" onsubmit="handleQuery(event)">
+<div class="fg"><textarea placeholder="Type your query here*" required name="qMsg"></textarea></div>
+<div class="fg"><input type="tel" placeholder="Phone Number*" required name="qPhone"></div>
+<div class="fg"><input type="email" placeholder="Enter your email*" required name="qEmail"></div>
+<button type="submit" class="btn-query">SUBMIT QUERY</button>
+</form>
+</div>
+</div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/917993822600?text=Hi%20CloudBridge!%20I'm%20interested%20in%20the%20DevOps%20Training%20Program." target="_blank" class="wa-float" title="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- Toast -->
+<div class="toast" id="toast">✅ Submitted successfully! Redirecting to WhatsApp...</div>
+
+<script>
+// Reveals
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Navbar scroll
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',scrollY>20)});
+
+// Counter animation
+const counterObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const target=parseInt(el.dataset.target);if(!target)return;let c=0;const inc=target/40;const timer=setInterval(()=>{c+=inc;if(c>=target){el.textContent=target+'+';clearInterval(timer)}else{el.textContent=Math.ceil(c)+'+'}},30);counterObs.unobserve(el)}})},{threshold:.5});
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>counterObs.observe(el));
+
+// Mobile nav
+function toggleNav(){document.getElementById('navRight').classList.toggle('open')}
+document.querySelectorAll('.nav-right a').forEach(l=>l.addEventListener('click',()=>document.getElementById('navRight').classList.remove('open')));
+
+// Categories dropdown
+function toggleCat(){
+const d=document.getElementById('catDrop'),b=document.getElementById('catBtn');
+d.classList.toggle('show');b.classList.toggle('open');
+}
+document.addEventListener('click',e=>{
+if(!e.target.closest('#catBtn')&&!e.target.closest('#catDrop')){
+document.getElementById('catDrop').classList.remove('show');
+document.getElementById('catBtn').classList.remove('open');
+}
+});
+
+// Search overlay
+function openSearch(){document.getElementById('searchOverlay').classList.add('show');document.body.style.overflow='hidden';setTimeout(()=>document.getElementById('searchInput').focus(),100)}
+function closeSearch(){document.getElementById('searchOverlay').classList.remove('show');document.body.style.overflow=''}
+
+// Syllabus
+function toggleSyl(h){h.parentElement.classList.toggle('open')}
+
+// Query widget
+function toggleQuery(){document.getElementById('queryWidget').classList.toggle('collapsed')}
+
+// Forms → WhatsApp
+function handleSubmit(e){
+e.preventDefault();const d=new FormData(e.target);
+const msg=encodeURIComponent(`🚀 *New CloudBridge Enrollment*\n\n👤 *Name:* ${d.get('name')}\n📧 *Email:* ${d.get('email')}\n📱 *Phone:* ${d.get('phone')}\n🌍 *Country:* ${d.get('country')}\n💼 *Role:* ${d.get('role')}\n📊 *Experience:* ${d.get('experience')}\n⏰ *Timing:* ${d.get('timing')}\n💬 *Message:* ${d.get('message')||'N/A'}`);
+showToast();setTimeout(()=>window.open(`https://wa.me/917993822600?text=${msg}`,'_blank'),1200);e.target.reset();
+}
+function handleQuery(e){
+e.preventDefault();const d=new FormData(e.target);
+const msg=encodeURIComponent(`📩 *New Query*\n📱 ${d.get('qPhone')}\n📧 ${d.get('qEmail')}\n💬 ${d.get('qMsg')}`);
+showToast();setTimeout(()=>window.open(`https://wa.me/917993822600?text=${msg}`,'_blank'),1200);e.target.reset();
+}
+function showToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000)}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth',block:'start'});closeSearch();document.getElementById('catDrop').classList.remove('show')}})});
+</script>
+</body>
+</html>
